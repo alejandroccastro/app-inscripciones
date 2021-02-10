@@ -21,13 +21,16 @@
         
     <style>
         select#cursos,select#profesors {
-            min-width: 100%;
+        min-width: 100%;
         }
         .cardgrid {
-            min-width: 30%;
+        min-width: 40%;
         }
         .cardpage {
         align-self: center;
+        }
+        .center{
+        text-align: center;
         }
     </style>
 
@@ -55,11 +58,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Acceder') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else
@@ -72,12 +75,12 @@
                                     <a class="dropdown-item" href="{{ url('/Curso') }}">
                                         Cursos
                                     </a>     
-                                    <a class="dropdown-item" href="{{ url('/Alumno') }}">
-                                       Alumnos
-                                    </a>
                                     <a class="dropdown-item" href="{{ url('/Profesor') }}">
                                        Profesores
-                                    </a>        
+                                    </a>
+                                    <a class="dropdown-item" href="{{ url('/Alumno') }}">
+                                       Alumnos
+                                    </a>                                            
                                     <a class="dropdown-item" href="{{ url('/Inscripcion') }}">
                                        Inscripciones
                                     </a>                                                                    
